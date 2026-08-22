@@ -4,13 +4,11 @@ on:
   push:
     branches:
       - main
-  pull_request:
-    branches:
-      - main
+      - children
+
 
 jobs:
   ci:
-    if: github.event_name == 'pull_request'
     runs-on: ubuntu-latest
     steps:
       - name: Checkout source
@@ -29,7 +27,7 @@ jobs:
         run: npm test
 
   docker:
-    if: github.event_name == 'push'
+    needs: ci
     runs-on: ubuntu-latest
 
     steps:
