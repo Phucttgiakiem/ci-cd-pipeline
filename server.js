@@ -6,7 +6,7 @@ const app = express();
 
 // routing path
 app.get('/', (req, res) => {
-  res.send('Hello World! backend server is running');
+  res.send('Hello World!');
 });
 
 // Start the server
