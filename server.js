@@ -4,9 +4,9 @@ const express = require('express');
 // Next initialize the application
 const app = express();
 
-// routing path
-app.get('/', (req, res) => {
-  res.send('Hello World!');
+app.get('/api/hello', (req, res) => {
+  const name = req.query.name || 'bạn';
+  res.json({ message: `Xin chào, ${name}!` });
 });
 
 // Start the server
