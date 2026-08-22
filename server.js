@@ -6,7 +6,7 @@ const app = express();
 
 app.get('/api/hello', (req, res) => {
   const name = req.query.name || 'bạn';
-  res.json({ message: `Xin chào, ${name}!` });
+  res.json({ message: `Xin, ${name}!` });
 });
 
 // Start the server
