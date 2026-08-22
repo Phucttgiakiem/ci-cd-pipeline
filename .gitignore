@@ -1,0 +1,34 @@
+# dependencies
+node_modules/
+
+# build output (nếu dùng TypeScript compile ra dist)
+dist/
+build/
+
+# env files (chứa secret — tuyệt đối không commit)
+.env
+.env.local
+.env.*.local
+
+# logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# testing/coverage
+coverage/
+
+# PM2 runtime logs (nếu bạn deploy bằng PM2 như đã nói ở trên)
+.pm2/
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# IDE
+.vscode/
+.idea/
+
+# TypeScript build info
+*.tsbuildinfo
