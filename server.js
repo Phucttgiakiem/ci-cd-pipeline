@@ -6,10 +6,10 @@ const app = express();
 
 app.get('/api/hello', (req, res) => {
   const name = req.query.name || 'bạn';
-  res.json({ message: `Xin, ${name}!` });
+  res.json({ message: `Xin chào, ${name}!` });
 });
 
 // Start the server
-app.listen(3000, () => {
-  console.log('Server started on port 3000');
+app.listen(8080, () => {
+  console.log('Server started on port 8080');
 });
